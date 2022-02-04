@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+    <h1>Contact</h1>
+
+    {{ form_start(form) }}
+    {{ form_row(form.name, {'attr': {'placeholder':'John Doe'} }) }}
+    {{ form_row(form.email, {'attr': {'placeholder':'john.doe@mail.com'} }) }}
+    {{ form_row(form.message, {'attr': {'placeholder':'Please insert your message here ...'} }) }}
+    <button type="submit" class="btn btn-success">Send</button>
+    {{ form_end(form) }}
+{% endblock %}
