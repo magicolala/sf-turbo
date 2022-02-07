@@ -34,8 +34,9 @@
 </head>
 <body>
 {% include 'partials/_nav.html.twig' %}
-<div class="container mt-5">
+{% inclue 'partials/_flash_messages.html.twig' %}
+<main role="main" class="container mt-4">
     {% block body %}{% endblock %}
-</div>
+</main>
 </body>
 </html>

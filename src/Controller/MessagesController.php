@@ -41,7 +41,9 @@ class MessagesController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            dd($form->getData());
+            $this->addFlash('success', 'Message sent! We\'ll get back to you very soon');
+
+            return $this->redirectToRoute('app_home');
         }
 
         return $this->render('messages/new.html.twig', [
