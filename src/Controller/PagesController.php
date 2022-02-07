@@ -17,6 +17,8 @@ class PagesController extends AbstractController
     #[Route('/about', name: 'app_about')]
     public function about(): Response
     {
+        sleep(1);
+        $this->addFlash('success', 'Délai de 1 sec');
         return $this->render('pages/about.html.twig');
     }
 }

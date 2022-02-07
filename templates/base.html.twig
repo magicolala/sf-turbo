@@ -30,11 +30,12 @@
     ></script>
     {% block javascripts %}
         {# {{ encore_entry_script_tags('app') }} #}
+        <script type="module" src="https://cdn.skypack.dev/@hotwired/turbo"></script>
     {% endblock %}
 </head>
 <body>
 {% include 'partials/_nav.html.twig' %}
-{% inclue 'partials/_flash_messages.html.twig' %}
+{% include 'partials/_flash_messages.html.twig' %}
 <main role="main" class="container mt-4">
     {% block body %}{% endblock %}
 </main>
